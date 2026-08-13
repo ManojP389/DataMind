@@ -1,6 +1,7 @@
 """FastAPI application entry point."""
 
 from fastapi import FastAPI, File, HTTPException, Query, UploadFile, status
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.agents.data_agent import DataProfilingAgent
 from app.graph.workflow import dataset_analysis_workflow, query_workflow
@@ -11,6 +12,13 @@ from app.tools.data_tools import FILE_ID_PATTERN, resolve_dataset_source
 
 
 app = FastAPI(title="DataMind", version="0.1.0")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 data_profiling_agent = DataProfilingAgent()
 
 
