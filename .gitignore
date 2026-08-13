@@ -1,0 +1,39 @@
+# Python bytecode and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment secrets
+.env
+backend/.env
+
+# Runtime dataset uploads
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+
+# Local development server logs
+backend/server.*.log
+
+# Coverage and build output
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/

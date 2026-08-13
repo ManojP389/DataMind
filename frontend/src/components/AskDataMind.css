@@ -1,0 +1,45 @@
+.ask-data-card {
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 7px 22px rgb(15 23 42 / .04);
+}
+
+.ask-data-card .section-heading p { color: #64748b; margin-top: 7px; }
+.ask-form { display: flex; gap: 12px; align-items: stretch; }
+.ask-form textarea {
+  flex: 1;
+  min-width: 0;
+  resize: vertical;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  color: #172554;
+}
+.ask-form button { align-self: flex-end; }
+.example-questions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 12px; }
+.example-question { padding: 7px 10px; color: #4338ca; background: #eef2ff; font-size: .82rem; }
+.query-result { display: grid; gap: 16px; margin-top: 24px; padding-top: 22px; border-top: 1px solid #e2e8f0; }
+.query-result h3 { margin: 0; color: #0f172a; }
+.query-question { display: grid; gap: 4px; }
+.query-question span { color: #64748b; font-size: .8rem; font-weight: 700; text-transform: uppercase; }
+.query-question p { margin: 0; color: #334155; }
+.ai-insight, .query-section { padding: 16px; border: 1px solid #e2e8f0; border-radius: 10px; }
+.ai-insight { display: grid; gap: 8px; border-color: #c7d2fe; background: linear-gradient(135deg, #f5f7ff, #eef2ff); }
+.ai-insight .eyebrow { color: #4f46e5; }
+.ai-insight p { margin: 0; color: #312e81; font-size: 1.02rem; line-height: 1.6; }
+.query-section { display: grid; gap: 11px; }
+.query-result code { display: block; overflow-x: auto; padding: 10px; border-radius: 8px; color: #1e293b; background: #f1f5f9; white-space: pre-wrap; }
+.result-table-wrap { overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 9px; }
+.result-table-wrap table { width: 100%; border-collapse: collapse; color: #334155; text-align: left; }
+.result-table-wrap th, .result-table-wrap td { padding: 11px 13px; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
+.result-table-wrap th { color: #475569; background: #f8fafc; font-size: .82rem; }
+.result-table-wrap tr:last-child td { border-bottom: 0; }
+.no-results { color: #64748b; }
+
+@media (max-width: 760px) {
+  .ask-data-card { padding: 21px; }
+  .ask-form { flex-direction: column; }
+  .ask-form button { width: 100%; align-self: auto; }
+}
